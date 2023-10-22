@@ -6,7 +6,7 @@ public class Customer {
   private String username;
   private String password;
   private int accountId;
-
+  private boolean authenticated;
   // create Constructor
 
   public Customer(int id, String name,String username, String password, int accountId ){
@@ -15,6 +15,16 @@ public class Customer {
     setUsername(username);
     setPassword(password);
     setAccountId(accountId);
+    setAuthenticated(false);
+
+  }
+
+  public boolean isAuthenticated() {
+    return this.authenticated;
+  }
+
+  public void setAuthenticated(boolean authenticated) {
+    this.authenticated = authenticated;
   }
 
   public int getId() {
